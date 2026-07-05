@@ -60,6 +60,10 @@ async def main():
     await app.start()
     await app.updater.start_polling()
 
+    # Mantener el bot vivo
+    import asyncio
+    await asyncio.Event().wait()
+
 if __name__ == "__main__":
     import asyncio
     asyncio.run(main())
